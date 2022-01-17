@@ -1,59 +1,35 @@
-ALGORITHM numCharacter
+ALGORITHM Checkpoint
 VAR
-    nbchar:INTEGER
-    c:Char
-BEGIN
-nbchar:= 0
-REPEAT
-   Read(c)
-    for(i = 0; i < string.length; i++) 
-      nbchar:=  nbchar+1
+   numWords: INTEGER
+   numVowels: INTEGER
+   numCharac: INTEGER
+   numSpaces: INTEGER
+   c: CHAR
 
-   END_IF
+BEGIN
+
+numVowels:= 0
+numWords:= 0
+numSpaces:= 0
+numCharac:= 0
+while (c!==".") Do
+Read (c)
+
+IF (c==" ") THEN
+   numSpaces= numSpaces+1
+
    
-UNTIL (C='.')
-Write(nbchar)
+END_IF
+
+   numWords:= numSpaces+1
+   numCharac:= numCharac+1
+
+IF (c== vowels) THEN
+   numVowels:= numVowels+1
+
+END_IF
+
+END While
+
 END
 
-            //The number of words in the sentence  
-
-
-ALGORITHM numWord
-VAR
-    nbword:INTEGER
-    c:Char
-BEGIN
-nbword:= 0
-REPEAT
-   Read(c)
-    for(i = 0; i < string.length; i++)   
-      IF (c ==' ')  
-      //To count the last word present in the string, increment nbword by 1  
-      nbword++ 
-      nbword:=  nbword+1
-
-   END_IF
-   
-UNTIL (C='.')
-Write(nbword)
-END
-
-            //The number of vowels in the sentence
-
-
-ALGORITHM numVowels
-VAR
-    nbVowel:INTEGER
-    c:Char
-BEGIN
-nbVowel:= 0
-REPEAT
-   Read(c)
-    if(i == a || e || i || o || == u) 
-      nbVowel:=  nbVowel+1
-
-   END_IF
-   
-UNTIL (C='.')
-Write(nbVowel)
-END
