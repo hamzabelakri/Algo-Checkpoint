@@ -1,0 +1,59 @@
+ALGORITHM numCharacter
+VAR
+    nbchar:INTEGER
+    c:Char
+BEGIN
+nbchar:= 0
+REPEAT
+   Read(c)
+    for(i = 0; i < string.length; i++) 
+      nbchar:=  nbchar+1
+
+   END_IF
+   
+UNTIL (C='.')
+Write(nbchar)
+END
+
+            //The number of words in the sentence  
+
+
+ALGORITHM numWord
+VAR
+    nbword:INTEGER
+    c:Char
+BEGIN
+nbword:= 0
+REPEAT
+   Read(c)
+    for(i = 0; i < string.length; i++)   
+      IF (c ==' ')  
+      //To count the last word present in the string, increment nbword by 1  
+      nbword++ 
+      nbword:=  nbword+1
+
+   END_IF
+   
+UNTIL (C='.')
+Write(nbword)
+END
+
+            //The number of vowels in the sentence
+
+
+ALGORITHM numVowels
+VAR
+    nbVowel:INTEGER
+    c:Char
+BEGIN
+nbVowel:= 0
+REPEAT
+   Read(c)
+    if(i == a || e || i || o || == u) 
+      nbVowel:=  nbVowel+1
+
+   END_IF
+   
+UNTIL (C='.')
+Write(nbVowel)
+END
